@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+		<script src="model1.js" type="module"></script>
+	</head>	
+		<body>
+			<h1>Модель 1, варіант 4. Прогнозування споживання електроенергії - <a href="https://archive.ics.uci.edu/dataset/851/steel+industry+energy+consumption">https://archive.ics.uci.edu/dataset/851/steel+industry+energy+consumption</a></h1>				
+					<table>
+						<tbody>
+						<tr>
+							<td> Lagging Current Reactive.Power, kVarh </td>
+							<td> <input type="number" id="LagCRP" value="2.95" /> </td>
+						</tr>
+						<tr>
+							<td> Leading Current Reactive Power, kVarh </td>
+							<td> <input type="number" id="LeadCRP" value="0" /> </td>
+						</tr>
+						<tr>
+							<td> Lagging Current Power Factor, % </td>
+							<td> <input type="number" id="LagCPF" value="73.21"/> </td>
+						</tr>
+						<tr>
+							<td> Leading Current Power Factor, % </td>
+							<td> <input type="number" id="LeadCPF" value="100"/> </td>
+						</tr>
+						<tr>
+							<td> NSM (Number of Seconds from midnight Continuous), S </td>
+							<td> <input type="number" id="NSM" value="900"/> </td>
+						</tr>
+						</tbody>
+					</table>
+					<p><button id="predict">Визначити енергоспоживання</button>
+					<p><div id="consumption">Йде завантаження моделі, прохання зачекати</div>
+		</body>
+</html>
