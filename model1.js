@@ -1,6 +1,6 @@
 
 window.addEventListener("DOMContentLoaded", async() => {
-		const MODEL_URL = '/model.json';
+		const MODEL_URL = 'model.json';
 		const model = await tf.loadLayersModel(MODEL_URL);
 		
 		let consumption_text = document.getElementById("consumption");
